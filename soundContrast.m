@@ -18,7 +18,7 @@ for k = 1:n                     % 数据库中每一个说话人的特征
         end      
     end
     msg=nameList{k1}
-    msgbox('数字是',msg);
+    msgbox({'数字是',msg});
 end
 end
 
