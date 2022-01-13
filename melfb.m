@@ -3,7 +3,6 @@ function m = melfb(p, n, fs)
 f0 = 700 / fs;
 fn2 = floor(n/2);
 lr = log(1 + 0.5/f0) / (p+1);
-% convert to fft bin numbers with 0 for DC term
 bl = n * (f0 * (exp([0 1 p p+1] * lr) - 1));
 %直接转换为FFT的数字模型
 b1 = floor(bl(1)) + 1;
