@@ -1,34 +1,41 @@
 # soundContrast_Matlab_demo
 
-����VQ��˵����ʶ��ϵͳ
+基于VQ的说话人识别系统
 
-ѵ������ȡ������Ϣ���������������࣬������ͬ��������ɵ��뱾��
+训练：提取语音信息的特征参数并分类，产生不同码字所组成的码本。
 
-ʶ�𣺲���ŷʽ�����ȣ���VQ��������ƽ��ʧ���ȡ�
+识别：采用欧式距离测度，用VQ方法计算平均失真测度。
 
 ## 
 
-## ����˵��
+## 函数说明
 
 ### mfcc
 
-�������̣�
+基本过程：
 
-�������� - Ԥ���� - ��֡ - �Ӵ� - ����FFT - Mel�˲����� - �������� - DCT
+连续语音 - 预加重 - 分帧 - 加窗 - 快速FFT - Mel滤波器组 - 对数运算 - DCT
 
 
 
 ### train
 
-����mfcc������ȡ��Ƶ�����õ�Mel����ϵ����Ȼ��ͨ��vqlbg�����õ�VQ�뱾��
+调用mfcc函数提取音频特征得到Mel倒谱系数，然后通过vqlbg函数得到VQ码本。
 
 ### melfb
 
+MEL滤波器组函数
+
 ### disteu
 
-### vqlbg
+测距函数
 
+### vqlbg
+VQ码生成器
 ### voicepringt
+
+声纹对比函数
 
 ### soundContrast
 
+声音对比函数
